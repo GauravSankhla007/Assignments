@@ -1,0 +1,42 @@
+/*Write a program in to read three values from user and find out the second maximum number from
+ those three values and show the result to the user. This program can be written in two different ways
+ try to think and write three different variations?
+ */
+import java.util.Scanner;
+public class q2 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter 1st value: ");
+        int n1 = scanner.nextInt();
+        System.out.print("Enter 2nd value: ");
+        int n2 = scanner.nextInt();
+        System.out.print("Enter 3rd value: ");
+        int n3 = scanner.nextInt();
+
+        int max = Math.max(n1, Math.max(n2, n3));
+        int min = Math.min(n1, Math.max(n2, n3));
+
+        int second_1 = n1 + n2 + n3 - max - min;
+        System.out.println("First Variation: " + second_1);
+
+        int second_2 = 0;
+        if (n1 > n2) {
+            if (n2 > n3) {
+                second_2 = n2;
+            } else {
+                second_2 = n3;
+            }
+        } else {
+            if (n1 > n3) {
+                second_2 = n1;
+            } else if (n2>n3) {
+                second_2 = n3;
+            }
+            else {
+                second_2 = n2;
+            }
+        }
+        System.out.println("Second Variation: " + second_2);
+    }
+}

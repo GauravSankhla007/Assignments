@@ -1,0 +1,20 @@
+/*Write a program to print a Fibonacci series of N number i.e. first N terms of Fibonaacci
+series should be pritned. In Fibonacci series sum of nth term is sum of n-1 and n-2 th term
+ */
+import java.util.Scanner;
+public class q7_1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();
+        int a = 0;
+        int b = 1;
+        for (int i=0;i<N;i++){
+            System.out.print(a+" ");
+            int c = a + b;
+            a = b;
+            b = c;
+
+        }
+    }
+}

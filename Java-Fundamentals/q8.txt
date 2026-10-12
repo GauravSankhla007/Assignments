@@ -1,0 +1,24 @@
+/*Write a program to print a Fibonacci series where until we reach a number N i.e.
+all the printed numbers should be less than N. In Fibonacci series sum of nth term is sum of
+ n-1 and n-2 th term
+ */
+import java.util.Scanner;
+public class q8 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int N = scanner.nextInt();
+        int a = 0;
+        int b = 1;
+
+
+            while (a<N){
+                System.out.print(a+" ");
+                int c = a+b;
+                a = b;
+                b = c;
+            }
+
+    }
+}

@@ -1,0 +1,38 @@
+/*Write a program in to read three values from user and find out the maximum number from those three values and show the result to the user. This program can be written in three different ways try to think and write three different variations?
+ */
+import java.util.Scanner;
+public class q1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter 1st value: ");
+        int n1 = scanner.nextInt();
+        System.out.print("Enter 2nd value: ");
+        int n2 = scanner.nextInt();
+        System.out.print("Enter 3rd value: ");
+        int n3 = scanner.nextInt();
+
+        int max =0;
+
+        if(n1>n2){
+            if(n1>n3){
+                max = n1;
+            }
+            else{
+                max = n3;
+            }
+        }
+        else{
+            if (n2>n3){
+                max = n2;
+            }
+            else {
+                max = n3;
+            }
+        }
+        System.out.println("Variation 1: " + max);
+
+        int max_1 = Math.max(n1,Math.max(n2,n3));
+        System.out.println("Variation 2: " + max_1);
+    }
+}

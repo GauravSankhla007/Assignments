@@ -1,0 +1,31 @@
+/*Write a program to print the N numbers which are in fibonacci series as well as prime
+number. A prime number is a number which can be divided only by 1 and the number itself.
+ */
+import java.util.Scanner;
+public class q9_1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();
+        int a = 0;
+        int b = 1;
+        int count = 0;
+        while(count<N){
+            int c = a + b;
+            a = b;
+            b = c;
+            boolean isPrime = true;
+            for (int j = 2; j < a; j++) {
+                if (a % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime && a>1) {
+                System.out.print(a + " ");
+                count++;
+            }
+        }
+    }
+}

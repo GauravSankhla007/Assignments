@@ -1,0 +1,31 @@
+/*Write a program to read a number from the user and show message if the number is
+palindrom or not. A palindrom number is a number which is similar if read from both sides
+e.g. 1221.
+ */
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class Q4 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number you want to check is palindrome or not: ");
+        int num = scanner.nextInt();
+        int orignal = num;
+        int reversed = 0;
+        while (num>0){
+            int digit = num%10;
+            num = num/10;
+            reversed = reversed*10 + digit;
+        }
+        boolean palindrome = false;
+        if(orignal==reversed){
+            palindrome = true;
+        }
+        if(palindrome==true) {
+            System.out.println("The number is Palindrome");
+        }
+        else {
+            System.out.println("The number is not Palindrome");
+        }
+    }
+}

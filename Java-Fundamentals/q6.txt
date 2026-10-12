@@ -1,0 +1,27 @@
+//Write a program to read a number N from the user and print N palindrome numbers.
+import java.util.Scanner;
+public class q6_1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        int count = 0;
+        int number = 1;
+        while(count<num) {
+                int pal = number;
+                int reversed = 0;
+                while (pal > 0) {
+                    int digit = pal % 10;
+                    pal = pal / 10;
+                    reversed = reversed * 10 + digit;
+
+                }
+                if (reversed == number) {
+                    System.out.println(number);
+                    count++;
+                }
+                number++;
+        }
+    }
+}

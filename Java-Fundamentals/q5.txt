@@ -1,0 +1,24 @@
+/*Write a program to read a number from the user and check and print all palindrome number
+between 1 and the number read from the user.
+ */
+import java.util.Scanner;
+public class q5 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        for(int i = 1;i<=num;i++){
+            int pal = i;
+            int reversed = 0;
+             while (pal>0){
+                int digit = pal%10;
+                pal = pal/10;
+                reversed = reversed*10 + digit;
+            }
+             if(reversed==i){
+                 System.out.println(i);
+             }
+        }
+    }
+}

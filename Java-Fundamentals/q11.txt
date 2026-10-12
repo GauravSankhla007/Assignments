@@ -1,0 +1,26 @@
+/*Write a program to print all armstrong numbers which are less than N. Armstrong number
+ is a number that is equal to the sum of cubes of its digits. For example 0, 1, 153, 370, 371
+ and 407 are the Armstrong numbers.
+ */
+import java.util.Scanner;
+public class q11_1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();  
+        for (int i = 0; i < N; i++) {
+            int orignal = i;
+            int temp = i;
+            int a = 0;
+            while (temp > 0) {
+                int digit = temp % 10;
+                a += digit * digit * digit;
+                temp = temp / 10;
+
+            }
+            if (a == orignal) {
+                System.out.println(orignal);
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+/*Write a program in to read three values from user and find out the minimum number from
+those three values and show the result to the user. This program can be written in two different
+ ways try to think and write three different variations?
+ */
+import java.util.Scanner;
+public class q3 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter 1st value: ");
+        int n1 = scanner.nextInt();
+        System.out.print("Enter 2nd value: ");
+        int n2 = scanner.nextInt();
+        System.out.print("Enter 3rd value: ");
+        int n3 = scanner.nextInt();
+
+        int min;
+
+        if(n1<n2){
+            if(n1<n3){
+                min = n1;
+            }
+            else{
+                min = n3;
+            }
+        }
+        else{
+            if (n2<n3){
+                min = n2;
+            }
+            else {
+                min = n3;
+            }
+        }
+        System.out.println("Variation 1: " + min);
+
+        int min_1 = Math.min(n1,Math.min(n2,n3));
+        System.out.println("Variation 2: " + min_1);
+    }
+}

@@ -1,0 +1,24 @@
+/*Write a program to reduce a number to a single digit. Make a sum of each digit until the
+final sum is reduced to a single digit.
+ */
+import java.util.Scanner;
+public class q12_1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();
+        int original = N;
+
+        while (N>=10) {
+            int sum = 0;
+            while (N > 0) {
+                int digit = N % 10;
+                sum += digit;
+                N = N / 10;
+            }
+            N = sum;
+        }
+        System.out.println("Final digit: "+ N);
+    }
+}

@@ -1,0 +1,34 @@
+/*Write a program to print all number which are less then N and those are prime number as
+well as armstrong number
+ */
+import java.util.Scanner;
+public class q14_1 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int N = scanner.nextInt();
+        for (int i = 0; i < N; i++) {
+            int orignal = i;
+            int temp = i;
+            int a = 0;
+            boolean isPrime = true;
+
+            for(int j = 2; j < i; j++) {
+                if(i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            while (temp > 0) {
+                int digit = temp % 10;
+                a += digit * digit * digit;
+                temp = temp / 10;
+
+            }
+            if (a == orignal && isPrime) {
+                System.out.println(orignal);
+            }
+        }
+    }
+}
